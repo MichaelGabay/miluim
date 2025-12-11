@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react"
+import Loader from "./Loader"
 import "./CityAutocomplete.css"
 
 const API_URL = "https://data.gov.il/api/3/action/datastore_search"
@@ -195,7 +196,11 @@ function CityAutocomplete({ value, onChange, onBlur, error, placeholder }) {
           className={`city-input ${error ? "error" : ""}`}
           autoComplete="off"
         />
-        {isLoading && <span className="loading-indicator">טוען...</span>}
+        {isLoading && (
+          <span className="loading-indicator">
+            <Loader size="small" />
+          </span>
+        )}
       </div>
 
       {showSuggestions && suggestions.length > 0 && (

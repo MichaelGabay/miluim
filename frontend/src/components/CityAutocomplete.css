@@ -34,8 +34,9 @@
   left: 0.75rem;
   top: 50%;
   transform: translateY(-50%);
-  color: #7f8c8d;
-  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .city-suggestions {
