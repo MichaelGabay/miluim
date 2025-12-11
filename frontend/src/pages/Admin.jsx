@@ -2,9 +2,8 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import BusinessForm from '../components/BusinessForm'
+import { API_URL } from '../config'
 import './Admin.css'
-
-const API_URL = 'http://localhost:5000/api'
 
 function Admin() {
   const [isAuthenticated, setIsAuthenticated] = useState(false)

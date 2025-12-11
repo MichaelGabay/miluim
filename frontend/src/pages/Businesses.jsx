@@ -3,9 +3,9 @@ import axios from 'axios'
 import BusinessCard from '../components/BusinessCard'
 import BusinessForm from '../components/BusinessForm'
 import SearchFilter from '../components/SearchFilter'
+import Loader from '../components/Loader'
+import { API_URL } from '../config'
 import './Businesses.css'
-
-const API_URL = 'http://localhost:5000/api'
 
 function Businesses() {
   const [businesses, setBusinesses] = useState([])
@@ -84,7 +84,9 @@ function Businesses() {
     return (
       <div className="businesses-page">
         <div className="container">
-          <div className="loading">טוען...</div>
+          <div className="loading">
+            <Loader size="large" />
+          </div>
         </div>
       </div>
     )
