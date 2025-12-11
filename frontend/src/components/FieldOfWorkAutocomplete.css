@@ -1,0 +1,108 @@
+.field-autocomplete-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.field-autocomplete-input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.field-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+  direction: rtl;
+}
+
+.field-input:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.field-input.error {
+  border-color: #e74c3c;
+}
+
+.field-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  direction: rtl;
+}
+
+.suggestion-item {
+  padding: 0.75rem;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.suggestion-item:hover,
+.suggestion-item.selected {
+  background-color: #f8f9fa;
+}
+
+.field-name {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.no-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  padding: 0.75rem;
+  color: #7f8c8d;
+  text-align: center;
+  z-index: 1000;
+  direction: rtl;
+}
+
+/* Scrollbar styling for suggestions */
+.field-suggestions::-webkit-scrollbar {
+  width: 8px;
+}
+
+.field-suggestions::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.field-suggestions::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+.field-suggestions::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
